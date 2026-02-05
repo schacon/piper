@@ -119,10 +119,10 @@ fn read_messages(room: &str) -> Result<(), Box<dyn std::error::Error>> {
         return Ok(());
     }
 
-    let last_10 = messages.iter().rev().take(10).rev();
+    let last_m = messages.iter().rev().take(30).rev();
 
     println!("Last messages in room '{}':\n", room);
-    for msg in last_10 {
+    for msg in last_m {
         let timestamp = chrono::DateTime::parse_from_rfc3339(&msg.timestamp)?;
         let local_time = timestamp.with_timezone(&chrono::Local);
         println!(
