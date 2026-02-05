@@ -3,7 +3,11 @@
     "allow": [
       "Bash(cargo init:*)",
       "Bash(cargo build:*)",
-      "Bash(./target/release/piper say:*)"
+      "Bash(./target/release/piper say:*)",
+      "Bash(cargo --version:*)",
+      "Bash(rustc:*)",
+      "Bash(cargo test --help:*)",
+      "Bash(cargo run:*)"
     ]
   }
 }
